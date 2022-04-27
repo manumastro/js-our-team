@@ -6,14 +6,14 @@ Una volta definita la struttura dati, prendendo come riferimento la card di esem
 
 const teamContainer = document.querySelector('.team-container');
 console.log(teamContainer);
-
 const teamArray = 
 
 [
   {
     name: 'Wayne Barnett',
-    role: 'Founder & CEO',
-    image: ''
+    role: 'Founder CEO',
+    image: '',
+    
   },
   {
     name: 'Angela Caroll',
@@ -41,16 +41,17 @@ const teamArray =
     image: ''
   }
 ]
-console.log(teamArray);
 
 for(let i in teamArray){
   const team = teamArray[i];
+  team.image = team.name.split(' ').join('-').toLowerCase() + '-' + team.role.split(' ').join('-').toLowerCase() + '.jpg';
+
   const output = 
   `
   <div class="team-card">
             <div class="card-image">
               <img
-                src="img/wayne-barnett-founder-ceo.jpg"
+                src="img/${team.image}""
                 alt="${team.name}"
               />
             </div>
@@ -60,5 +61,8 @@ for(let i in teamArray){
             </div>
           </div>
   `;
+
   teamContainer.innerHTML += output;
 }
+
+
