@@ -15,33 +15,33 @@ const teamArray =
   {
     name: 'Wayne Barnett',
     role: 'Founder CEO',
-    image: '',
+    image: 'wayne-barnett-founder-ceo.jpg',
     
   },
   {
     name: 'Angela Caroll',
     role: 'Chief Editor',
-    image: ''
+    image: 'angela-caroll-chief-editor.jpg'
   },
   {
     name: 'Walter Gordon',
     role: 'Office Manager',
-    image: ''
+    image: 'walter-gordon-office-manager.jpg'
   },
   {
     name: 'Angela Lopez',
     role: 'Social Media Manager',
-    image: ''
+    image: 'angela-lopez-social-media-manager.jpg'
   },
   {
     name: 'Scott Estrada',
     role: 'Developer',
-    image: ''
+    image: 'scott-estrada-developer.jpg'
   },
   {
     name: 'Barbara Ramos',
     role: 'Graphic Designer',
-    image: ''
+    image: 'barbara-ramos-graphic-designer.jpg'
   }
 ]
 
@@ -68,7 +68,6 @@ function createCards(){
     console.log(teamArray[i]);
   
     const team = teamArray[i];
-    team.image = team.name.split(' ').join('-').toLowerCase() + '-' + team.role.split(' ').join('-').toLowerCase() + '.jpg';
   
     const output = 
     `
@@ -95,7 +94,6 @@ function createCardsAdded(teamArrayAdded){
     console.log(teamArrayAdded[i]);
   
     const team = teamArrayAdded[i];
-    team.image = team.name.split(' ').join('-').toLowerCase() + '-' + team.role.split(' ').join('-').toLowerCase() + '.jpg';
   
     const output = 
     `
